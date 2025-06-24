@@ -1,0 +1,2 @@
+FLASK_APP=chatmain.py
+FLASK_ENV=development

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Séries Pokémon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #CDE5DA;
+  color: #2E5F4D;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #E6F1EC;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  height: 50px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #2E5F4D;
+  font-weight: 600;
+  font-size: 20px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 10px #4CAF88, 0 0 20px #4CAF88;
+  color: #125037;
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+section.series {
+  margin-bottom: 60px;
+}
+
+h2 {
+  font-size: 28px;
+  border-bottom: 3px solid #4CAF88;
+  padding-bottom: 8px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.serie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.serie-card {
+  background-color: #E6F1EC;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 3px 8px rgba(46, 95, 77, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.serie-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px #4CAF88;
+}
+
+.serie-card img {
+  width: 220px;
+  height: 300px;
+  border-radius: 5%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 2px solid #4CAF88;
+}
+
+.character-name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #2E5F4D;
+  margin-bottom: 6px;
+}
+
+.character-role {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4CAF88;
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="Logo Pokémon" class="logo" />
+        <nav>
+          <ul>
+            <li><a href="{{ url_for('chat.pokemon') }}">Home</a></li>
+            <li><a href="{{ url_for('chat.characters') }}">Personagens</a></li>
+            <li><a href="{{ url_for('chat.series') }}">Séries</a></li>
+          </ul>
+      </nav>
+      </header>
+    <main>
+
+      <section class="series" id="serie1">
+        <h2>SÉRIES</h2>
+        <div class="serie-grid">
+      
+          <!-- 1. Indigo League -->
+        <div class="serie-card" data-name="Indigo League">
+          <img src="{{ url_for('static', filename='imagens/indigo.jpeg') }}" alt="Indigo League" />  
+          <div class="character-name">Indigo League (Kanto)</div>
+          <div class="character-role">
+            Ash começa sua jornada, conquistando ginásios e formando amizades com Misty e Brock. Apresenta os primeiros Pokémon e estabelece o tom clássico da franquia.
+          </div>
+        </div>
+
+        <!-- 2. Adventures in the Orange Islands -->
+        <div class="serie-card" data-name="Orange Islands">
+          <img src="{{ url_for('static', filename='imagens/orange-islands.jpeg') }}" alt="Adventures in the Orange Islands" />
+          <div class="character-name">Adventures in the Orange Islands</div>
+          <div class="character-role">
+            Continuação da jornada de Ash após Kanto, com novos personagens, aventuras em ilhas tropicais e sua primeira vitória como campeão da Liga Laranja.
+          </div>
+        </div>
+
+        <!-- 3. Johto Journeys / League Champions / Master Quest -->
+        <div class="serie-card" data-name="Johto">
+          <img src="{{ url_for('static', filename='imagens/johto.jpeg') }}" alt="Johto" />
+          <div class="character-name">Johto Journeys / League Champions / Master Quest</div>
+          <div class="character-role">
+            Ash explora a região de Johto, reencontra antigos amigos e participa de uma nova liga. Inclui arcos de desenvolvimento com novos Pokémon e desafios.
+          </div>
+        </div>
+
+        <!-- 4. Advanced Generation (Hoenn e Fronteira) -->
+        <div class="serie-card" data-name="Hoenn">
+          <img src="{{ url_for('static', filename='imagens/hoenn.jpeg') }}" alt="Advanced Generation" />
+          <div class="character-name">Advanced Generation (Hoenn e Fronteira)</div>
+          <div class="character-role">
+            Ash viaja por Hoenn com May e Max, focando em concursos e batalhas. Após os ginásios, enfrenta a Frontier Brain na Batalha da Fronteira.
+          </div>
+        </div>
+
+        <!-- 5. Diamond & Pearl (Sinnoh) -->
+        <div class="serie-card" data-name="Sinnoh">
+          <img src="{{ url_for('static', filename='imagens/sinnoh.jpeg') }}" alt="Diamond & Pearl" />
+          <div class="character-name">Diamond & Pearl (Sinnoh)</div>
+          <div class="character-role">
+            Com Dawn como guia, Ash cresce como treinador e enfrenta rivalidades intensas, incluindo a de Paul. Considerada uma das fases mais maduras e bem escritas.
+          </div>
+        </div>
+
+        <!-- 6. Black & White (Unova) -->
+        <div class="serie-card" data-name="Unova">
+          <img src="{{ url_for('static', filename='imagens/unova.jpeg') }}" alt="Black & White" />
+          <div class="character-name">Black & White (Unova)</div>
+          <div class="character-role">
+            Um "soft reboot" que reinicia a jornada de Ash como um novato. Recebe críticas mistas por seu ritmo e roteiro.
+          </div>
+        </div>
+
+        <!-- 7. XY e XYZ (Kalos) -->
+        <div class="serie-card" data-name="Kalos">
+          <img src="{{ url_for('static', filename='imagens/kalos.jpeg') }}" alt="XY e XYZ" />
+          <div class="character-name">XY e XYZ (Kalos)</div>
+          <div class="character-role">
+            Ash se torna mais estratégico e maduro, participando de concursos e enfrentando batalhas intensas. Destaque para o Greninja e evolução emocional na saga XYZ.
+          </div>
+        </div>
+
+        <!-- 8. Sun & Moon (Alola) -->
+        <div class="serie-card" data-name="Alola">
+          <img src="{{ url_for('static', filename='imagens/alola.jpeg') }}" alt="Sun & Moon" />
+          <div class="character-name">Sun & Moon (Alola)</div>
+          <div class="character-role">
+            Estilo slice‑of‑life com Ash frequentando a escola Pokémon. Muitos momentos inusitados e fortes interações sociais nas ilhas tropicais de Alola.
+          </div>
+        </div>
+
+        <!-- 9. Journeys / Master Journeys / Ultimate Journeys -->
+        <div class="serie-card" data-name="Journeys">
+          <img src="{{ url_for('static', filename='imagens/journeys.jpeg') }}" alt="Journeys" />
+          <div class="character-name">Journeys / Master Journeys / Ultimate Journeys</div>
+          <div class="character-role">
+            Ash e Goh viajam por todas as regiões. Destaque para Ash megaevoluindo Lucario e batalhas globais. Explora conexões entre todas as gerações anteriores.
+          </div>
+        </div>
+
+      
+        </div>
+      </section>
+      
+    
+  </main>
+  <script>
+    // Verifica se o navegador suporta a API de fala
+    if ('speechSynthesis' in window) {
+      const cards = document.querySelectorAll('.serie-card');
+  
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          const description = card.querySelector('.character-role').textContent;
+          const utterance = new SpeechSynthesisUtterance(description);
+          utterance.lang = 'pt-BR'; // Define o idioma para português brasileiro
+          speechSynthesis.speak(utterance);
+        });
+      });
+    } else {
+      console.warn('Seu navegador não suporta a API de fala.');
+    }
+  </script>
+</body>
+</html>

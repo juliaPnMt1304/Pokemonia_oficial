@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personagens Pokémon - Gerações 1 a 3</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #CDE5DA;
+      color: #2E5F4D;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #E6F1EC;
+      position: relative;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2E5F4D;
+      font-weight: 600;
+      font-size: 20px;
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+    }
+    nav ul li a:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px #4CAF88, 0 0 20px #4CAF88;
+    color: #125037; /* opcional, muda a cor ao passar o mouse */
+  }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+    section.generation {
+      margin-bottom: 60px;
+    }
+    h2 {
+      font-size: 28px;
+      border-bottom: 3px solid #4CAF88;
+      padding-bottom: 8px;
+      margin-bottom: 30px;
+    }
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+      gap: 25px;
+    }
+    .character-card {
+      background-color: #E6F1EC;
+      border-radius: 15px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(46,95,77,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+    .character-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px #4CAF88;
+    }
+    .character-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+      border: 2px solid #4CAF88;
+    }
+    .character-name {
+      font-weight: 700;
+      font-size: 18px;
+      color: #2E5F4D;
+      margin-bottom: 6px;
+    }
+    .character-role {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4CAF88;
+    }
+    .kanto-grid {
+    grid-template-columns: repeat(4, 1fr);
+    }
+    .johto-grid {
+    grid-template-columns: repeat(4, 1fr);
+    }
+    .hoenn-grid {
+    grid-template-columns: repeat(4, 1fr);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="Logo Pokémon" class="logo" />
+    <nav>
+        <ul>
+          <li><a href="{{ url_for('chat.pokemon') }}">Home</a></li>
+          <li><a href="{{ url_for('chat.characters') }}">Personagens</a></li>
+          <li><a href="{{ url_for('chat.series') }}">Séries</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+    <h1>Personagens Pokémon: Gerações 1 a 3</h1>
+
+    <!-- Geração 1 -->
+    <section class="generation" id="gen1">
+      <h2>Personagens principais</h2>
+      <div class="character-grid">
+        <div class="character-card" data-name="Ash Ketchum">
+          <img src="{{ url_for('static', filename='imagens/ash.jpg') }}" alt="Ash Ketchum" />
+          <div class="character-name">Ash Ketchum</div>
+          <div class="character-role">Protagonista principal / Treinador</div>
+        </div>
+        <div class="character-card" data-name="Pikachu">
+          <img src="{{ url_for('static', filename='imagens/pikachu.jpg') }}" alt="Ash Ketchum" />
+          <div class="character-name">Pikachu</div>
+          <div class="character-role">Pokemon principal / Melhor amigo do Ash</div>
+        </div>
+        <div class="character-card" data-name="James">
+          <img src="{{ url_for('static', filename='imagens/James.webp') }}" alt="Brock" />
+          <div class="character-name">James</div>
+          <div class="character-role">Vilão/ Rival</div>
+        </div>
+        <div class="character-card" data-name="Jessie">
+          <img src="{{ url_for('static', filename='imagens/jessie.jpg') }}" alt="Gary Oak" />
+          <div class="character-name">Jessie</div>
+          <div class="character-role">Vilã/Rival</div>
+        </div>
+        <div class="character-card" data-name="Professor Carvalho">
+          <img src="{{ url_for('static', filename='imagens/Professor_Carvalho.jpg') }}" alt="Professor Oak" />
+          <div class="character-name">Professor Carvalho</div>
+          <div class="character-role">Pesquisador Pokémon</div>
+        </div>
+      </div>
+      <h2>Líderes de Ginásio - Geração 1 (Kanto)</h2>
+      <div class="character-grid kanto-grid">
+        <div class="character-card" data-name="Brock">
+          <img src="{{ url_for('static', filename='imagens/brook.jpeg') }}" alt="Brock" />
+          <div class="character-name">Brock</div>
+          <div class="character-role">Líder de Ginásio (Pewter - Pedra)</div>
+        </div>
+        <div class="character-card" data-name="Misty">
+          <img src="{{ url_for('static', filename='imagens/Misty.jpeg') }}" alt="Misty" />
+          <div class="character-name">Misty</div>
+          <div class="character-role">Líder de Ginásio (Cerulean - Água)</div>
+        </div>
+        <div class="character-card" data-name="Lt. Surge">
+          <img src="{{ url_for('static', filename='imagens/surge.jpeg') }}" alt="Lt. Surge" />
+          <div class="character-name">Sargento Surge</div>
+          <div class="character-role">Líder de Ginásio (Vermilion - Elétrico)</div>
+        </div>
+        <div class="character-card" data-name="Erika">
+          <img src="{{ url_for('static', filename='imagens/erika.jpeg') }}" alt="Erika" />
+          <div class="character-name">Erika</div>
+          <div class="character-role">Líder de Ginásio (Celadon - Planta)</div>
+        </div>
+        <div class="character-card" data-name="Koga">
+          <img src="{{ url_for('static', filename='imagens/koga.png') }}" alt="Koga" />
+          <div class="character-name">Koga</div>
+          <div class="character-role">Líder de Ginásio (Fuchsia - Veneno)</div>
+        </div>
+        <div class="character-card" data-name="Sabrina">
+          <img src="{{ url_for('static', filename='imagens/sabrina.jpeg') }}" alt="Sabrina" />
+          <div class="character-name">Sabrina</div>
+          <div class="character-role">Líder de Ginásio (Saffron - Psíquico)</div>
+        </div>
+        <div class="character-card" data-name="Blaine">
+          <img src="{{ url_for('static', filename='imagens/Blaine.jpeg') }}" alt="Blaine" />
+          <div class="character-name">Blaine</div>
+          <div class="character-role">Líder de Ginásio (Cinnabar - Fogo)</div>
+        </div>
+        <div class="character-card" data-name="Giovanni">
+          <img src="{{ url_for('static', filename='imagens/giovanni.jpeg') }}" alt="Giovanni" />
+          <div class="character-name">Giovanni</div>
+          <div class="character-role">Líder de Ginásio (Viridian - Terra)</div>
+        </div>
+      </div>
+      <section class="generation" id="gen2-leaders">
+        <h2>Líderes de Ginásio - Geração 2 (Johto)</h2>
+        <div class="character-grid johto-grid">
+          <div class="character-card" data-name="Falker">
+            <img src="{{ url_for('static', filename='imagens/Falker.jpeg') }}" alt="Falkner" />
+            <div class="character-name">Falkner</div>
+            <div class="character-role">Líder de Ginásio (Violet - Voador)</div>
+          </div>
+          <div class="character-card" data-name=" Bugsy">
+            <img src="{{ url_for('static', filename='imagens/bugsy.jpg') }}" alt="Bugsy" />
+            <div class="character-name">Bugsy</div>
+            <div class="character-role">Líder de Ginásio (Azalea - Inseto)</div>
+          </div>
+          <div class="character-card" data-name="Whitney">
+            <img src="{{ url_for('static', filename='imagens/whitney.jpg') }}" alt="Whitney" />
+            <div class="character-name">Whitney</div>
+            <div class="character-role">Líder de Ginásio (Goldenrod - Normal)</div>
+          </div>
+          <div class="character-card" data-name="Morty">
+            <img src="{{ url_for('static', filename='imagens/Morty.jpg') }}" alt="Morty" />
+            <div class="character-name">Morty</div>
+            <div class="character-role">Líder de Ginásio (Ecruteak - Fantasma)</div>
+          </div>
+          <div class="character-card" data-name="Chuck">
+            <img src="{{ url_for('static', filename='imagens/Chuck.jpg') }}" alt="Chuck" />
+            <div class="character-name">Chuck</div>
+            <div class="character-role">Líder de Ginásio (Cianwood - Lutador)</div>
+          </div>
+          <div class="character-card" data-name="Jasmine">
+            <img src="{{ url_for('static', filename='imagens/jasmine.jpg') }}" alt="Jasmine" />
+            <div class="character-name">Jasmine</div>
+            <div class="character-role">Líder de Ginásio (Olivine - Aço)</div>
+          </div>
+          <div class="character-card" data-name="Pryce">
+            <img src="{{ url_for('static', filename='imagens/Pryce.webp') }}" alt="Pryce" />
+            <div class="character-name">Pryce</div>
+            <div class="character-role">Líder de Ginásio (Mahogany - Gelo)</div>
+          </div>
+          <div class="character-card" data-name="Clair">
+            <img src="{{ url_for('static', filename='imagens/Clair.jpg') }}" alt="Clair" />
+            <div class="character-name">Clair</div>
+            <div class="character-role">Líder de Ginásio (Blackthorn - Dragão)</div>
+          </div>
+        </div>
+      </section>
+      <section class="generation" id="gen3-leaders">
+        <h2>Líderes de Ginásio - Geração 3 (Hoenn)</h2>
+        <div class="character-grid hoenn-grid">
+          <div class="character-card" data-name="Roxanne">
+            <img src="{{ url_for('static', filename='imagens/Roxanne.jpg') }}" alt="Roxanne" />
+            <div class="character-name">Roxanne</div>
+            <div class="character-role">Líder de Ginásio (Rustboro - Pedra)</div>
+          </div>
+          <div class="character-card" data-name="Brawly">
+            <img src="{{ url_for('static', filename='imagens/Brawly.jpg') }}" alt="Brawly" />
+            <div class="character-name">Brawly</div>
+            <div class="character-role">Líder de Ginásio (Dewford - Lutador)</div>
+          </div>
+          <div class="character-card" data-name="Wattson">
+            <img src="{{ url_for('static', filename='imagens/Wattson.jpg') }}" alt="Wattson" />
+            <div class="character-name">Wattson</div>
+            <div class="character-role">Líder de Ginásio (Mauville - Elétrico)</div>
+          </div>
+          <div class="character-card" data-name="Flannery">
+            <img src="{{ url_for('static', filename='imagens/Flannery.jpg') }}" alt="Flannery" />
+            <div class="character-name">Flannery</div>
+            <div class="character-role">Líder de Ginásio (Lavaridge - Fogo)</div>
+          </div>
+          <div class="character-card" data-name="Norman">
+            <img src="{{ url_for('static', filename='imagens/Norman.jpg') }}" alt="Norman" />
+            <div class="character-name">Norman</div>
+            <div class="character-role">Líder de Ginásio (Petalburg - Normal)</div>
+          </div>
+          <div class="character-card" data-name="Winona">
+            <img src="{{ url_for('static', filename='imagens/Fortree Gym Leader - Winona.jpg') }}" alt="Winona" />
+            <div class="character-name">Winona</div>
+            <div class="character-role">Líder de Ginásio (Fortree - Voador)</div>
+          </div>
+          <div class="character-card" data-name="Tate">
+            <img src="{{ url_for('static', filename='imagens/Tate.jpg') }}" alt="Tate e Liza" />
+            <div class="character-name">Tate</div>
+            <div class="character-role">Líder de Ginásio (Mossdeep - Psíquico)</div>
+          </div>
+          <div class="character-card" data-name="Liza">
+            <img src="{{ url_for('static', filename='imagens/Liza.jpg') }}" alt="Liza" />
+            <div class="character-name">Liza</div>
+            <div class="character-role">Líder de Ginásio (Mossdeep - Psíquico)</div>
+          </div>
+        </div>
+      </section>
+    
+  </main>
+  <script>
+   function falarTexto(texto) {
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(texto);
+
+    function setVozAntonio() {
+      const voices = window.speechSynthesis.getVoices();
+      const antonio = voices.find(v => v.name.toLowerCase().includes('antonio'));
+
+      if (antonio) {
+        utterance.voice = antonio;
+      } else {
+        console.warn("Voz 'Antonio' não encontrada. Usando voz padrão.");
+      }
+
+      window.speechSynthesis.cancel(); // interrompe falas anteriores
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Garante que as vozes estejam carregadas antes de usar
+    if (window.speechSynthesis.getVoices().length === 0) {
+      window.speechSynthesis.onvoiceschanged = setVozAntonio;
+    } else {
+      setVozAntonio();
+    }
+  } else {
+    alert("Seu navegador não suporta síntese de voz.");
+  }
+}
+
+const characterCards = document.querySelectorAll('.character-card');
+
+characterCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const nome = card.querySelector('.character-name').textContent;
+    falarTexto(nome);
+  });
+});
+
+  </script>
+  
+</body>
+</html>

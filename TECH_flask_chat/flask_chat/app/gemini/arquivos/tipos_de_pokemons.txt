@@ -1,0 +1,125 @@
+Rota de Fraquezas dos Tipos de Pokémon
+
+A "rota de fraquezas" dos Pokémon é uma das principais formas de avaliar a força de um Pokémon contra outro. Além dos status base de cada um, os tipos elementais são o que mais influenciam resultado de uma batalha, determinando se um ataque será eficaz, supereficaz, pouco eficaz ou até mesmo nem causar contra o oponente.
+Nos jogos da série principal, cada tipo elemental (existem atualmente 18) possui suas próprias forças, fraquezas, resistências e imunidades. Isso afeta a quantidade de dano causado por ataques e o impacto que o Pokémon sofre ao ser atacado. Também existe o dano neutro, quando não há vantagem nem desvantagem entre os tipos.
+Abaixo temos todas as vantagens e desvantagens de todos os 18 tipos atuais dos Pokemons:
+
+Tipo Normal
+Eficaz contra: Nenhum tipo
+Pouco eficaz contra: Pedra, Aço
+Resistente a ataques de: Fantasma
+Vulnerável a ataques de: Lutador
+
+Tipo Lutador
+Eficaz contra: Normal, Pedra, Aço, Gelo e Dark
+Pouco eficaz contra: Voador, Venenoso, Psíquico, Inseto, Fantasma e Fada
+Resistente a ataques de: Pedra, Inseto e Dark
+Vulnerável a ataques de: Voador, Psíquico e Fada
+
+Tipo Fogo
+Eficaz contra: Planta, Gelo, Inseto e Aço
+Pouco eficaz contra: Fogo, Água, Pedra e Dragão
+Resistente a ataques de: Fogo, Planta, Gelo, Inseto, Aço e Fada
+Vulnerável a ataques de: Água, Pedra e Terra
+
+Tipo Água
+Eficaz contra: Fogo, Terra e Pedra
+Pouco eficaz contra: Água, Planta e Dragão
+Resistente a ataques de: Fogo, Água, Gelo e Aço
+Vulnerável a ataques de: Planta e Elétrico
+
+Tipo Planta
+Eficaz contra: Água, Terra ePedra
+Pouco eficaz contra: Fogo, Planta, Venenoso, Voador, Inseto, Dragão e Aço
+Resistente a ataques de: Água, Planta, Terra e Elétrico
+Vulnerável a ataques de: Fogo, Gelo, Venenoso, Voador e Inseto
+
+Tipo Elétrico
+Eficaz contra: Água e Voador
+Pouco eficaz contra: Planta, Elétrico e Dragão
+Sem efeito contra: Terra
+Resistente a ataques de: Elétrico, Voador e Aço
+Vulnerável a ataques de: Terra
+
+Tipo Gelo
+Eficaz contra: Planta, Terra, Voador e Dragão
+Pouco eficaz contra: Fogo, Água, Gelo e Aço
+Resistente a ataques de: Gelo
+Vulnerável a ataques de: Fogo, Lutador, Pedra e Aço
+
+Tipo Pedra
+Eficaz contra: Fogo, Gelo, Voador e Inseto
+Pouco eficaz contra: Lutador, Terra e Aço
+Resistente a ataques de: Fogo, Normal, Venenoso e Voador
+Vulnerável a ataques de: Água, Planta, Lutador, Terra e Aço
+
+Tipo Venenoso
+Eficaz contra: Planta e Fada
+Pouco eficaz contra: Venenoso, Terra, Pedra e Fantasma
+Sem efeito contra: Aço
+Resistente a ataques de: Planta, Lutador, Venenoso, Inseto e Fada
+Vulnerável a ataques de: Terra e Psíquico
+
+Tipo Inseto
+Eficaz contra: Planta, Psíquico e Dark
+Pouco eficaz contra: Fogo, Lutador, Venenoso, Voador, Fantasma, Aço e Fada
+Resistente a ataques de: Planta, Lutador e Terra
+Vulnerável a ataques de: Fogo, Voador e Pedra
+
+Tipo Voador
+Eficaz contra: Planta, Inseto e Lutador
+Pouco eficaz contra: Elétrico, Pedra e Aço
+Resistente a ataques de: Planta, Lutador e Inseto
+Vulnerável a ataques de: Elétrico, Gelo e Pedra
+Imune a ataques de: Terra
+
+Tipo Psíquico
+Eficaz contra: Lutador, Venenoso
+Pouco eficaz contra: Psíquico e Aço
+Sem efeito contra: Dark  
+Resistente a ataques de: Lutador e Psíquico
+Vulnerável a ataques de: Inseto, Fantasma e Dark
+
+Tipo Fantasma
+Eficaz contra: Fantasma, Psíquico
+Pouco eficaz contra: Dark
+Sem efeito contra: Normal
+Resistente a ataques de: Veneno e Inseto
+Vulnerável a ataques de: Fantasma e Dark
+Imune a ataques de: Normal e Lutador
+
+Tipo Dragão
+Eficaz contra: Dragão
+Pouco eficaz contra: Aço
+Sem efeito contra: Fada
+Resistente a ataques de: Fogo, Água, Elétrico e Planta
+Vulnerável a ataques de: Gelo, Dragão e Fada
+
+Tipo Dark  
+Eficaz contra: Fantasma e Psíquico
+Pouco eficaz contra: Lutador, Dark e Fada
+Resistente a ataques de: Fantasma e Dark
+Vulnerável a ataques de: Lutador, Inseto e Fada
+Imune a ataques de: Psíquico
+
+Tipo Aço
+Eficaz contra: Gelo, Pedra, Fada
+Pouco eficaz contra: Fogo, Água, Elétrico e Aço
+Resistente a ataques de: Normal, Planta, Gelo, Voador, Psíquico, Inseto, Pedra, Dragão, Aço e Fada
+Vulnerável a ataques de: Fogo, Lutador e Terra
+Imune a ataques de: Venenoso
+
+Tipo Fada
+Eficaz contra: Lutador, Dragão e Dark
+Pouco eficaz contra: Fogo, Venenoso e Aço
+Resistente a ataques de: Lutador, Inseto e Dark
+Vulnerável a ataques de: Venenoso e Aço
+Imune a ataques de: Dragão
+
+Tipo Terra
+Eficaz contra: Fogo, Elétrico, Venenoso, Pedra e Aço
+Pouco eficaz contra: Planta e Inseto
+Sem efeito contra: Voador
+Resistente a ataques de: Venenoso e Pedra
+Vulnerável a ataques de: Água, Gelo e Planta
+Imune a ataques de: Elétrico
